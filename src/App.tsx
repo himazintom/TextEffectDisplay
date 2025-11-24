@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './styles/main.scss'; // Import SCSS
 import { MUSIC_LIST, MUSIC_TREE } from './data';
 import { initializeApp } from './main';
