@@ -1,5 +1,4 @@
 import { BaseEffect } from '../core/BaseEffect';
-import type { MusicItem } from '../types';
 import { effectConfig } from '../config/effectConfig';
 
 export class RecordPlayerEffect extends BaseEffect {
@@ -62,7 +61,7 @@ export class RecordPlayerEffect extends BaseEffect {
         this.container.appendChild(this.recordContainer);
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.recordContainer) return;
 
         this.rotation += 0.0005;

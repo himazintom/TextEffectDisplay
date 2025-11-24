@@ -6,7 +6,6 @@ import { VerticalRainEffect } from './effects/VerticalRainEffect';
 import { ParticleExplosionEffect } from './effects/ParticleExplosionEffect';
 import { TypographyMosaicEffect } from './effects/TypographyMosaicEffect';
 import { MUSIC_LIST } from './data';
-import type { EffectConfig } from './types';
 
 // Effect Metadata
 const EFFECTS_METADATA = [

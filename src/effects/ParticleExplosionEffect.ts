@@ -1,5 +1,4 @@
 import { BaseEffect } from '../core/BaseEffect';
-import type { MusicItem } from '../types';
 import { effectConfig } from '../config/effectConfig';
 
 export class ParticleExplosionEffect extends BaseEffect {
@@ -113,7 +112,7 @@ export class ParticleExplosionEffect extends BaseEffect {
         }
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         // Handled by custom loops
     }
 

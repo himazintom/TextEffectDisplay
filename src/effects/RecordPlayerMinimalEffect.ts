@@ -1,5 +1,4 @@
 import { BaseEffect } from '../core/BaseEffect';
-import type { MusicItem } from '../types';
 
 export class RecordPlayerMinimalEffect extends BaseEffect {
     private containerEl: HTMLDivElement | null = null;
@@ -112,7 +111,7 @@ export class RecordPlayerMinimalEffect extends BaseEffect {
         el.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.containerEl) return;
         this.rotation += 0.001;
 

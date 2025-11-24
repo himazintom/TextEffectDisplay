@@ -1,6 +1,5 @@
 import { BaseEffect } from '../core/BaseEffect';
 import { effectConfig } from '../config/effectConfig';
-import type { MusicItem } from '../types';
 
 interface TileData {
     el: HTMLDivElement;
@@ -26,8 +25,6 @@ export class TypographyMosaicEffect extends BaseEffect {
     private gridHeight: number = 0;
     private minX: number = 0;
     private minY: number = 0;
-    private maxX: number = 0;
-    private maxY: number = 0;
 
     protected onStart(): void {
         this.mosaicContainer = document.createElement('div');
@@ -53,8 +50,6 @@ export class TypographyMosaicEffect extends BaseEffect {
         // Start drawing from slightly outside top-left
         this.minX = -this.TILE_SIZE * 2;
         this.minY = -this.TILE_SIZE * 2;
-        this.maxX = this.minX + this.gridWidth;
-        this.maxY = this.minY + this.gridHeight;
 
         for (let row = 0; row < rows; row++) {
             for (let col = 0; col < cols; col++) {
@@ -133,9 +128,6 @@ export class TypographyMosaicEffect extends BaseEffect {
         this.intervals.push(intervalId);
     }
 
-    private getRandomMusicItem(): MusicItem {
-        return this.musicList[Math.floor(Math.random() * this.musicList.length)];
-    }
 
     private glitchTile(tile: TileData) {
         if (!tile.el.parentElement) return;
@@ -164,7 +156,7 @@ export class TypographyMosaicEffect extends BaseEffect {
         tile.textEl.style.fontSize = `${Math.floor(Math.random() * 6) + 10}px`;
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.mosaicContainer) return;
 
         this.tiles.forEach(tile => {

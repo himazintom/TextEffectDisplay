@@ -73,7 +73,7 @@ export class RecordPlayerClassicEffect extends BaseEffect {
         }
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.discEl) return;
         this.rotation += 0.005; // Standard RPM
         this.discEl.style.transform = `rotate(${this.rotation}rad)`;

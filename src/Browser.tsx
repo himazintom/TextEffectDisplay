@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { TreeNode } from './data';
+import type { TreeNode } from './types';
 
 interface FileNodeProps {
     node: TreeNode;
@@ -58,7 +58,7 @@ const FileNode: React.FC<FileNodeProps> = ({ node }) => {
                     marginLeft: '9px',
                     paddingLeft: '11px'
                 }}>
-                    {node.children!.map((child, idx) => (
+                    {node.children!.map((child: TreeNode, idx: number) => (
                         <FileNode key={`${child.name}-${idx}`} node={child} />
                     ))}
                 </div>

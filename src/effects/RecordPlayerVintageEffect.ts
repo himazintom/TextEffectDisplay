@@ -63,7 +63,7 @@ export class RecordPlayerVintageEffect extends BaseEffect {
         }
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.discEl) return;
         this.rotation += 0.004;
         this.wobble += 0.05;

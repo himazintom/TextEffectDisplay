@@ -116,7 +116,7 @@ export class RecordPlayerNeonEffect extends BaseEffect {
         el.style.transform = `translate(0, -50%) rotate(${angle}rad)`;
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.containerEl) return;
 
         this.rotation += 0.0005;

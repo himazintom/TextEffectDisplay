@@ -62,7 +62,7 @@ export class RecordPlayerGlassEffect extends BaseEffect {
         }
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         if (!this.discEl) return;
         this.rotation += 0.003;
 

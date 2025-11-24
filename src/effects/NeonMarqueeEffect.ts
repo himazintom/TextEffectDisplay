@@ -1,5 +1,4 @@
 import { BaseEffect } from '../core/BaseEffect';
-import type { MusicItem } from '../types';
 import { effectConfig } from '../config/effectConfig';
 
 export class NeonMarqueeEffect extends BaseEffect {
@@ -74,7 +73,7 @@ export class NeonMarqueeEffect extends BaseEffect {
         }
     }
 
-    protected onUpdate(deltaTime: number): void {
+    protected onUpdate(_deltaTime: number): void {
         // Not used because we have per-lane loops
     }
 

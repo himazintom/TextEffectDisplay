@@ -7,7 +7,7 @@
  * 3. Template Method パターン: 共通処理を基底クラスに集約
  */
 
-import type { MusicItem, EffectConfig, EffectItem } from './types';
+import type { MusicItem, EffectConfig, EffectItem } from '../types';
 
 export type EffectState = 'stopped' | 'starting' | 'running' | 'stopping';
 
